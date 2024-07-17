@@ -1,0 +1,71 @@
+.mon{
+    max-height: 100%;
+    max-width: 100%;
+    width: 300px!important;
+    height: 200px!important;
+    object-fit: cover;
+    border-radius: 12px;
+}
+a.techno,a[aria-expanded=true]::after,h2.course-lecon-title{transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out}a.course-link .back,a.course-link .front,a.formation-link .cover img,a.navbar-brand img{transition:all .5s ease-in-out!important;-webkit-transition:all .5s ease-in-out!important;-moz-transition:all .5s ease-in-out!important;-o-transition:all .5s ease-in-out!important;-ms-transition:all .5s ease-in-out!important}
+
+a.techno {
+    display: inline-block;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    color: #000;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 0px;
+    
+}
+
+
+a{cursor:pointer;text-decoration:none!important}
+svg.icon{height:24px;width:24px}
+.svg-48px svg{height:48px;width:48px}.btn-outline-white{color:#fff;border-color:#fff}
+a.category svg{height:24px;width:24px}
+
+/* */
+
+
+
+
+.folder-icon svg{height:48px;width:48px}
+
+.cat-icon svg{height:24px;width:24px}.cat-icon img{height:24px;width:24px}.price{font-weight:500;color:#38c172!important}
+
+a.techno{
+    display:inline-block;padding:8px 10px;margin-bottom:8px;margin-right:8px;color:#000;vertical-align:middle;background:#d86363;border:2px solid #524949c4;border-radius:5px;  font-weight: bolder;
+}
+a.techno svg{
+    height:24px;width:24px}a.techno.active{background:#5a2a2a
+    }
+a.techno:hover{
+    color:#bbff00;background:#70632c;text-decoration:none;box-shadow:unset!important
+}
+a.tech{
+    display:inline-block
+}
+a.tech svg{
+    height:32px;width:32px;margin-right:5px
+}
+
+span.play-icon svg{height:38px;width:38px}
+.course-cats svg{
+    height:24px;width:24px;margin-right:5px
+}
+.social a svg{height:36px;width:36px}
+
+
+
+a.course-play svg path{stroke:#fff}.formation:hover .cover svg,a.course-play:hover svg{cursor:pointer;fill:#f6d55c}
+
+
+.profil .links a svg{height:24px;width:24px}
+
+
+.formation:hover .cover svg,a.command-formule:hover,a.command-link:hover,a.course-play:hover,button.download-btn:hover{text-decoration:none;transform:scale(1.03);-webkit-transform:scale(1.03);-moz-transform:scale(1.03);-o-transform:scale(1.03);-ms-transform:scale(1.03);border-color:rgba(0,0,0,.5)}
+
+

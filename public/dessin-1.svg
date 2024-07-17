@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="130mm"
+   height="200mm"
+   viewBox="0 0 130 200"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="dessin-1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="black"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3289991"
+     inkscape:cx="397.29147"
+     inkscape:cy="279.53367"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1"
+       x="-0.055196872"
+       y="-0.10849875"
+       width="1.1103937"
+       height="1.2169975">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.18111197"
+         id="feGaussianBlur1" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch2"
+       id="linearGradient11"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(6.2944973,23.079045)"
+       x1="5.1231613"
+       y1="61.429659"
+       x2="108.03063"
+       y2="61.429659" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.5556px;line-height:1.7;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';display:inline;opacity:0.641657;mix-blend-mode:normal;fill:black;fill-opacity:1;stroke:#5a5a5a;stroke-width:9.36501;stroke-miterlimit:4.3;stroke-opacity:0;filter:url(#filter1)"
+       x="13.020827"
+       y="107.40139"
+       id="text1"
+       inkscape:highlight-color="black"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70.5556px;line-height:1.7;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif Bold';fill:black;fill-opacity:1;stroke:black;stroke-width:9.365;stroke-opacity:0"
+         x="13.020827"
+         y="107.40139"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif Bold Italic';fill:black;fill-opacity:10"
+   id="tspan2">&lt;</tspan>/&gt;</tspan></text>
+  </g>
+</svg>

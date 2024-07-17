@@ -1,0 +1,169 @@
+@extends('base')
+
+<link rel="stylesheet" href="{{asset('bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('prism.css')}}">
+<link rel="stylesheet" href="{{asset('bootstrap-icons/bootstrap-icons.css')}}">
+
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight bg-body">
+            {{ __('Dashboard') }}
+        </h2>
+    
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    {{ __("You're logged in!") }}
+
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{session('success')}}
+                          </div>
+                      
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+@php
+    setlocale(LC_TIME,'fr_FR.utf8');
+                            \Carbon\Carbon::setLocale('fr');
+        $count=0;                    
+@endphp
+    @foreach ($posts as  $post)
+        @php
+            $count++; 
+        @endphp
+    <div class="py-2 mb-0">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-6">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-2 text-gray-900">
+                    <ul>
+                        <li  > <strong>{{$post->titre}}</strong> </li>
+                        <li  >
+                            {{$post->contenus}}
+                        <hr>
+
+                        </li>
+                        @if ($post->codesource)
+                                <pre style="" class="border border-5  " ><code class="b @if($post->categorie_id==1)language-csv @elseif($post->categorie_id==2)language-css @elseif($post->categorie_id==3)language-php @elseif($post->categorie_id==4)language-javascript @elseif($post->categorie_id==5)language-python @elseif($post->categorie_id==6)language-java @endif">{{($post->codesource)}}</code></pre>
+                        @endif
+                    
+                        @if ($post->image)
+                        <li> <img src="{{$post->imageUrl()}}" style=" width: 100% ; height: 320px; object-fit: cover" alt="" srcset=""></li>
+                            
+                        @endif
+                        <p class="small mb-0" > 
+                            @if ($post->category)
+
+                            Categorie : 
+                            <strong>
+                            {{$post->category ?->titre}}
+
+                            </strong>
+                            @endif
+                            <br> 
+                            @if (!$post->tags->isEmpty())
+                                Tags : 
+                            @foreach ($post->tags as $tag)
+                                <span class="badge @if($tag->id==1)bg-dark @elseif($tag->id==2) bg-primary @elseif($tag->id==3) bg-danger @elseif($tag->id==4) bg-success @endif">
+                                    {{$tag->nom}} 
+                                </span>
+                            @endforeach
+                            @endif
+                            
+                        
+                        </p>
+                        <div class="d-flex align-items-end flex-column bd-highlight mb-0" >
+                            <div class="p-1 bd-highlight">
+                                Créer le : <strong>{{$post->created_at->formatLocalized(' %d %B %Y')}}</strong>
+
+                            </div>
+                            <div class="p-1 bd-highlight">
+                            Modifié le : <strong>{{$post->updated_at->formatLocalized(' %d %B %Y')}}</strong> 
+                            </div>
+                          </div>
+
+
+                        
+                          <a class="btn btn-link stretchedc-link" href="{{route('user.modif',["post"=>$post->id])}}"  >Modifier</a>
+                          <button class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal{{$count}}"  >Supprimmer</button>
+
+
+                    </ul>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Suppression -->
+
+<div class="modal fade" id="exampleModal{{$count}}"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel{{$count}}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Suppression</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="card-group">
+            <p style="color: red; font-weight: 500"><i class="bi bi-exclamation-triangle"></i> cette action est irréversible<i class="bi bi-exclamation-triangle"></i></p>
+            <p style="color: red; font-weight: 500" >
+            La suppression de ce post entraînera aussi la suppresion des commentaires y réferant
+            
+            </p>
+            <div class="carvd">
+                Date de publication : <strong>{{$post->created_at->formatLocalized(' %d %B %Y')}}</strong>
+                {{$post->id}}
+                @if($post->created_at != $post->updated_at)
+                <p>Modifé le : <strong> {{$post->updated_at->formatLocalized(' %d %B %Y')}}</strong></p>
+
+              @endif
+
+            </div>
+            
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <a href="{{route('deletepost',['id'=>$post->id,'post'=>$post->id])}}" class="btn btn-danger">Supprimer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Suppression -->
+
+
+
+    @endforeach
+
+
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-6">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900">
+    {{$posts->links()}}
+        
+    </div>
+    </div>
+</div>
+<script src="{{asset('prism.js')}}"></script>
+</x-app-layout>
